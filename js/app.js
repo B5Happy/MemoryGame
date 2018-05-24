@@ -48,10 +48,13 @@ function myFunction() {
     //newCards = shuffle(tscards);
    // const newLi = document.createElement('li');
     //const ul = document.createElement('ul');
-    const ul = document.getElementById("ddd");
+    //const ul = document.getElementById("ddd");
     //ul.classList.add('deck');
     //newLi.classList.add('card');
-   // div = document.getElementsById("test");
+    const ul = document.getElementById("ddd");
+
+    const div = document.getElementsById("test");
+
    const newI = document.createElement('i');
 
    tscards.forEach(function(card) {
@@ -63,11 +66,11 @@ function myFunction() {
         newI.classList.add('fa',card);
         newLi.appendChild(newI);
     ul.appendChild(newLi);
-
+    //div.appendChild(ul);
    // alert(ul);
     });
 
-   document.body.appendChild(ul);
+   //div.appendChild(ul);
     
 } 
 
