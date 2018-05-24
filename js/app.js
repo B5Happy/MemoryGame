@@ -119,13 +119,15 @@ function click() {
         } else {
 
             //setTimeout(dontMatch, 50000);
-            dontMatch();
+            dMatch();
+            setTimeout(dontMatch, 2500);
             //alert("work ?")
         }
         
     }
 
     increase();
+    star();
 
     if ( matchList === 8 ){
 
@@ -137,8 +139,11 @@ function click() {
 
 function show(event) {
 
+   // event.preventDefault();
+
     console.log(event.target)
     event.target.classList.add('open','show');
+    //event.target.disabled = true;
 
 }
 
@@ -163,13 +168,22 @@ function match(){
 
 }
 
+function dMatch() {
 
+    list[0].classList.remove("open");
+    list[1].classList.remove("open");
+    list[0].classList.add('dmatch');
+    list[1].classList.add('dmatch');
+    
+    
+}
+ 
 function  dontMatch() {
 
 
    // sleep(5000);
-    list[0].classList.remove("open", "show");
-    list[1].classList.remove("open", "show");
+    list[0].classList.remove("dmatch", "show");
+    list[1].classList.remove("dmatch", "show");
     list =[];
 
 
@@ -182,3 +196,44 @@ function increase(){
     
    // alert(clickCount);
 } 
+
+function reset() {
+    location.reload();
+  }
+
+  function star() {
+
+    //alert (document.getElementsByClassName("stars")[0].innerHTML)
+   const star = document.getElementById("star1");
+   const star2 = document.getElementById("star2");
+   const star3 = document.getElementById("star3");
+  // alert ( document.getElementById("star1").innerHTML);
+
+    if (  document.getElementsByTagName("span")[0].innerHTML > 28 ) {
+
+
+        //document.getElementsByClassName("stars")[0].removeChild(document.getElementById("star1").innerHTML); 
+        star3.remove();
+    
+    }  else {
+
+    if ( document.getElementsByTagName("span")[0].innerHTML > 24 )  {
+
+
+        //document.getElementsByClassName("stars")[0].removeChild(document.getElementById("star1").innerHTML); 
+        star2.remove();
+    
+    }  else {
+
+    if ( document.getElementsByTagName("span")[0].innerHTML > 20 )  {
+
+
+        //document.getElementsByClassName("stars")[0].removeChild(document.getElementById("star1").innerHTML); 
+        star.remove();
+    
+            }  
+        }
+    }
+
+
+}
