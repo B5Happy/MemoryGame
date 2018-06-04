@@ -71,10 +71,16 @@ function click() {
 
             match();
 
+            if ( matchList === 8 ){
+
+                alert("You win ! with "+ document.getElementsByTagName("span")[0].innerHTML + " moves" )
+            
+            }
+
         } else {
 
             dMatch();
-            setTimeout(dontMatch, 2500);
+            setTimeout(dontMatch, 1000);
         }
         
     }
@@ -82,11 +88,9 @@ function click() {
     increase();
     star();
 
-    if ( matchList === 8 ){
+    
 
-        alert("You win ! with "+ document.getElementsByTagName("span")[0].innerHTML + " moves" )
 
-    }
 }
 
 
@@ -94,6 +98,10 @@ function show(event) {
 
     event.target.classList.add('open','show');
    
+}
+
+function finish (){
+
 }
 
 function addToList(event){
@@ -173,6 +181,5 @@ function reset() {
             }  
         }
     }
-
 
 }
