@@ -5,6 +5,7 @@
     <title>Matching Game</title>
     <meta name="description" content="">
     <link rel="stylesheet prefetch" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet prefetch" href="https://fonts.googleapis.com/css?family=Coda">
     <link rel="stylesheet" href="css/app.css">
 </head>
@@ -23,11 +24,17 @@
         		<li id="star3"><i class="fa fa-star" ></i></li>
         	</ul>
 
-        	<span class="moves">0 </span> <a style="margin-right: 120px">Moves</a>                                
+        	<span class="moves">0 </span> <span id="text">Moves</span>                                
 
-            <div class="restart">
-        		<i class="fa fa-repeat" onclick="reset()"></i>
-        	</div>
+            
+                
+                
+                <i class="fa fa-clock-o" > <span id="timer"> 0</span> </i>
+
+                <i class="fa fa-repeat" onclick="reset()"></i>
+            
+            
+
         </section>
 
         <ul class="deck" id="box">
