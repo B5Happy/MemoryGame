@@ -19,7 +19,7 @@ let sec = 0;
 
 function myFunction() {
 
-    newCards = cardsListe; //shuffle(cardsListe);
+    newCards = shuffle(cardsListe);
     const displayAllCard = document.getElementById("box");
     const newCard = document.createElement('i');
 
@@ -95,7 +95,7 @@ function click() {
 
             match();
 
-            if ( matchList === 1 ){
+            if ( matchList === 8 ){
 
                 setTimeout(win, 1500);
                 //alert("You win ! with "+ document.getElementsByTagName("span")[0].innerHTML + " moves" )
